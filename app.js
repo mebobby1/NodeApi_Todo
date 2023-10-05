@@ -27,6 +27,9 @@ app.use(cors({
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
 
+app.get("/", (req, res)=>{
+    res.send("Nice Working");
+})
 // This is dynamic Routing so keep this dynamic routing in last because if we put this above then it shows error like above example because it treat special in id format 
 
 // Error Middleware
